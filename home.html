@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <audio id="bgmusic" src="sounds/0.mp3" preload="auto"></audio>
+  
+
+  <style>
+
+        body {
+          background-color: beige;
+            background-size: cover;
+            text-align: center;
+          
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+    @import url(https://fonts.googleapis.com/css?family=Raleway:400,500,700);
+    .poster-h {
+      font-family: 'Raleway', Arial, sans-serif;
+      position: relative;
+      margin: 10px;
+      min-width: 310px -60px;
+      max-width: 310px;
+      width: 100%;
+      color: #ffffff;
+      text-align: left;
+      background-color: #000000;
+      font-size: 16px;
+    }
+    .poster-h * {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      -webkit-transition: all 0.4s ease-in;
+      transition: all 0.4s ease-in;
+    }
+    .poster-h img {
+      position: relative;
+      max-width: 100%;
+      vertical-align: top;
+    }
+    .poster-h figcaption {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      opacity: 0;
+      padding: 20px 30px;
+    }
+    .poster-h figcaption:before,
+    .poster-h figcaption:after {
+      width: 1px;
+      height: 0;
+    }
+    .poster-h figcaption:before {
+      right: 0;
+      top: 0;
+    }
+    .poster-h figcaption:after {
+      left: 0;
+      bottom: 0;
+    }
+    .poster-h h3,
+    .poster-h p {
+      line-height: 1.5em;
+    }
+    .poster-h h3 {
+      margin: 0 0 5px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .poster-h p {
+      font-size: 0.8em;
+      font-weight: 500;
+      margin: 0 0 15px;
+    }
+    .poster-h a {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      z-index: 1;
+    }
+    .poster-h:before,
+    .poster-h:after,
+    .poster-h figcaption:before,
+    .poster-h figcaption:after {
+      position: absolute;
+      content: '';
+      background-color: #ffffff;
+      z-index: 1;
+      -webkit-transition: all 0.4s ease-in;
+      transition: all 0.4s ease-in;
+      opacity: 0.8;
+    }
+    .poster-h:before,
+    .poster-h:after {
+      height: 1px;
+      width: 0%;
+    }
+    .poster-h:before {
+      top: 0;
+      left: 0;
+    }
+    .poster-h:after {
+      bottom: 0;
+      right: 0;
+    }
+    .poster-h:hover img,
+    .poster-h.hover img {
+      opacity: 0.4;
+    }
+    .poster-h:hover figcaption,
+    .poster-h.hover figcaption {
+      opacity: 1;
+    }
+    .poster-h:hover figcaption:before,
+    .poster-h.hover figcaption:before,
+    .poster-h:hover figcaption:after,
+    .poster-h.hover figcaption:after {
+      height: 100%;
+    }
+    .poster-h:hover:before,
+    .poster-h.hover:before,
+    .poster-h:hover:after,
+    .poster-h.hover:after {
+      width: 100%;
+    }
+    .poster-h:hover:before,
+    .poster-h.hover:before,
+    .poster-h:hover:after,
+    .poster-h.hover:after,
+    .poster-h:hover figcaption:before,
+    .poster-h.hover figcaption:before,
+    .poster-h:hover figcaption:after,
+    .poster-h.hover figcaption:after {
+      opacity: 0.1;
+
+      </style>
+<style>
+      @import url('https://fonts.googleapis.com/css?family=Codystar:300&display=swap');
+
+body {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-family: 'Codystar';
+   background: black;
+   background-color: blac;
+   
+}
+
+.neons {
+   margin-top: 5rem;
+   margin-left: 20rem;
+   text-align: center;
+}
+
+.neons h1 {
+  font-size: 9rem;
+  text-align: center;
+   font-weight: bold;
+  -webkit-animation: glow 2s ease-in-out infinite alternate;
+  -moz-animation: glow 2s ease-in-out infinite alternate;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+     from {
+      color: #fff;
+    text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red, 0 0 40px red, 0 0 50px red, 0 0 60px red, 0 0 70px red, 0 0 90px red;
+  }
+  
+  to {
+     color: gray;
+    text-shadow: 0 0 20px red, 0 0 30px red, 0 0 40px red, 0 0 50px red, 0 0 60px red, 0 0 70px red, 0 0 80px red, 0 1 90px red;
+  }
+}
+</style>
+
+<script> 
+  function play(){
+    var audio = document.getElementById("audio");
+    audio.play();
+  }</script>
+
+
+    <title>Studio Ghibli</title>
+</head>
+<body onmousemove="ambient()">
+  
+  <div class="container">
+   
+    <div class="row">
+      <div class="neons col-12">
+         <h1><em>Studio Ghibli</em></h1>
+      </div>
+   </div>
+   <figure class="poster-h">
+    <img src="poster/spa.jpg" alt="Spirited Away"/>
+    <figcaption>
+      <h3>Spirited Away</h3>
+      <p>Spirited Away is a wondrous fantasy about a young girl named Chihiro who discovers a secret world of strange spirits, creatures and sorcery. When her parents are mysteriously transformed, she must call upon the courage she never knew she had to free herself and return her family to the outside world.</p>
+    </figcaption>
+    <a href="spirited.html"></a>
+  </figure> 
+   
+  <figure class="poster-h">
+    <img src="poster/howl.jpg" alt="HOWL's MovingCastle"/>
+    <figcaption>
+      <h3>HOWL's MovingCastle</h3>
+      <p>Sophie, an average teenage girl working in a hat shop, finds her life thrown into turmoil when she is literally swept off her feet by a handsome but mysterious wizard named Howl. After this chance meeting she is turned into a 90-year old woman by the vain and conniving Witch of the Waste. Embarking on an incredible adventure to lift the curse, she finds refuge in Howl's magical moving castle where she becomes acquainted with Markl, Howl's apprentice, and a hot-headed fire demon named Calcifer.
+        
+        As the true power of Howl’s wizardry is revealed, and his relationship with Sophie deepens, our young grey heroine finds herself fighting to protect them both from a dangerous war of sorcery that threatens their world.</p>
+    </figcaption>
+    <a href="howl.html"></a>
+  </figure>
+
+  <figure class="poster-h">
+    <img src="poster/totoro.jpg" alt="My Neighbor TOTORO"/>
+    <figcaption>
+      <h3>My Neighbor TOTORO</h3>
+      <p>Two young girls, Satsuki and Mei, have moved with their father into a new home in the country, while their mother recovers from illness in a nearby hospital. To their surprise, they soon discover that they share this home with some rather unusual creatures and even stranger neighbours - forest guardians that the girls dub Totoro. When trouble occurs, their new friends will help them rediscover hope.</p>
+    </figcaption>
+    <a href="totoro.html"></a>
+  </figure>
+  
+
+<figure class="poster-h">
+  <img src="poster/laputa.jpg" alt="LAPUTA : Castle in the Sky"/>
+  <figcaption>
+    <h3>LAPUTA : Castle in the Sky</h3>
+    <p>Pazu, an engineer's apprentice finds a young girl, Sheeta floating down from the sky wearing a glowing pendant. Together they discover both are searching for the legendary floating castle Laputa and vow to unravel the mystery of the luminous crystal around her neck. Their quest won't be easy however. There are air pirates, secret agents and astounding obstacles to keep them from the truth - and from each other. </p>
+  </figcaption>
+  <a href="laputa.html"></a>
+</figure>
+<figure class="poster-h">
+  <img src="poster/kiki.jpg" alt="KIKI's Delivery Service"/>
+  <figcaption>
+    <h3>KIKI's Delivery Service</h3>
+    <p>It is tradition for all young witches to leave their families on the night of a full moon to learn their craft. That night comes for Kiki, who follows her dream and embarks on the experience of a lifetime.
+      
+      With her chatty black cat, Jiji, she flies off to find the perfect spot in a faraway city. There, a bakery owner befriends Kiki and helps her start her own business: A high-flying delivery service.</p>
+  </figcaption>
+  <a href="kiki.html"></a>
+</figure>
+
+<figure class="poster-h">
+  <img src="poster/momo.jpg" alt="Princess MONONOKE"/>
+  <figcaption>
+    <h3>Princess MONONOKE</h3>
+    <p>While protecting his village from a rampaging boar-god, the young warrior Ashitaka becomes afflicted with a deadly curse. To find the cure that will save his life, he journeys deep into sacred depths of the Great Forest Spirit's realm where he meets San (Princess Mononoke), a girl raised by wolves. It's not long before Ashitaka is caught in the middle of a battle between iron-ore prospecting humans and the forest dwellers. He must summon the spirit-powers and all his courage to stop man and nature from destroying each other.</p>
+  </figcaption>
+  <a href="mononoke.html"></a>
+</figure>
+
+<figure class="poster-h">
+  <img src="poster/pnyo.jpg" alt="Ponyo"/>
+  <figcaption>
+    <h3>PONYO</h3>
+    <p>One morning near his seaside home, five year old Sosuke discovers a goldfish he names Ponyo, her head stuck in a jam jar. He rescues her, and fascinated with each other, they promise to stay firm friends. When Ponyo's father, a powerful underwater sorcerer, forces her to return to the ocean depths, Ponyo is determined to join Sosuke on the surface and become human. What follows is an amazing underwater adventure for all ages.</p>
+  </figcaption>
+  <a href="ponyo.html"></a>
+</figure>
+
+<figure class="poster-h">
+  <img src="poster/porcorosso.jpg" alt="Porco Rosso"/>
+  <figcaption>
+    <h3>Porco Rosso</h3>
+    <p>World War I has ended, and peace reigns again. Aviators from around the world circle above the Adriatic Sea, keen to recapture the romanticism of flight lost during the war. Many have turned to air piracy, in amongst which a hero emerges: a man with a pig's head, known as Porco Rosso (once an Italian air force pilot called Marco Paggot).
+
+      As mercenary law-enforcer of the skies and oceans, Porco Rosso protects cruise ships from the air pirates above them. When his actions are challenged by Curtis, an American who flies with the pirates, Porco Rosso is forced to defend his honour against this newcomer, which leads him to Fio, a feisty young engineer who rebuilds Porco's plane for the big dogfight.</p>
+  </figcaption>
+  <a href="rosso.html"></a>
+</figure>
+
+<figure class="poster-h">
+  <img src="poster/arrietty.jpg" alt="Arrietty"/>
+  <figcaption>
+    <h3>Arrietty</h3>
+    <p>In this whimsical adventure, tiny 14-year-old Arrietty lives under the floorboards of a sprawling mansion set in a magical, overgrown garden with her father and mother. Arrietty and her family live by borrowing. Everything they have, they borrow or make from the things they have borrowed from the old lady who lives in the mansion.
+
+      Their peaceful life is dramatically changed when the ever-curious Arrietty accidentally allows herself to be seen by Sho, a lonely 12-year-old human boy. The two begin to confide in each other and, before long, a friendship begins to blossom...
+      
+      </p>
+  </figcaption>
+  <a href="arrietty.html"></a>
+</figure>
+
+<figure class="poster-h">
+  <img src="poster/whisper.jpg" alt="Whisper of the Heart"/>
+  <figcaption>
+    <h3>Whisper of the Heart</h3>
+    <p>Shizuku Tsukishima is a bit of a book-worm, spending her last summer vacation in junior high school reading and translating popular foreign music into Japanese. With aspirations to one day become a writer, Shizuku can't help but notice that the name Seiji Amasawa appears on every one of the books she borrows from the library.
+
+      Through a series of curious and magical incidents, she comes to meet Seiji and discovers he has dreams of becoming a famous violinmaker in Italy. While their life-long goals pull them in two different directions, Shizuku and Seiji are determined to remain true to their strong feelings for one another.</p>
+  </figcaption>
+  <a href="http://kt1121.org/technote/read.cgi?board=html&y_number=0"></a>
+  <a href="whisper.html"></a>
+</figure>
+
+
+
+</div>
+
+<audio src="audio/0.mp3" autoplay>
+   
+</audio>
+
+<script>
+            
+  const ambient = () => {
+      document.getElementById('bgmusic').play();
+  }
+</script>
+</body>
+</html>
